@@ -1,0 +1,11 @@
+[package]
+name = "rust_cargo_options_benchmark"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+panic = "abort"
+strip = false
+lto = false
+opt-level = 0
+codegen-units = 256
