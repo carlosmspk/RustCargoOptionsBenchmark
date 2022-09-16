@@ -11,7 +11,7 @@ pub fn run_benchmark() -> anyhow::Result<()> {
     let file_name = std::env::args_os()
         .nth(1)
         .and_then(|s| s.into_string().ok())
-        .unwrap_or("canada".to_string());
+        .unwrap_or("src/canada".to_string());
     let n = std::env::args_os()
         .nth(2)
         .and_then(|s| s.into_string().ok())
