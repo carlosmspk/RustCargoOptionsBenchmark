@@ -7,7 +7,7 @@ from datetime import datetime
 
 OUT_REL_PATH = "target/release/rust_cargo_options_benchmark"
 FIRST_BUILD = True
-COMMON_CARGO_HEADER = '[package]\nname = "rust_cargo_options_benchmark"\nversion = "0.1.0"\nedition = "2021"\n\n'
+COMMON_CARGO_HEADER = '[package]\nname = "rust_cargo_options_benchmark"\nversion = "0.1.0"\nedition = "2021"\n\n[features]\ndefault = [\n  "tokio/full",\n]\n\n[dependencies]\nstatic-rc = "0.6.0"\nanyhow = "1.0.65"\nserde = {version = "1.0.144", features = ["derive"]}\nserde_json = {version = "1.0.85", features = ["float_roundtrip", "preserve_order"]}\nlasso = "0.6.0"\nlazy_static = "1.4.0"\nmd5 = "0.7.0"\ntokio = "1.20.0"\n\n'
 
 def read_param_json() -> dict:
     with open("params_to_try.json", "r") as f:

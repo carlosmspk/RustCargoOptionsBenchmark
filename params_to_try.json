@@ -1,1 +1,27 @@
-{"panic": ["\"abort\"", "\"unwind\""], "strip": ["true", "false"], "lto": ["true", "false"], "opt-level": ["0", "1", "2", "3", "\"s\"", "\"z\""], "codegen-units": ["1", "16", "256"]}
+{
+    "panic": [
+        "\"abort\"",
+        "\"unwind\""
+    ],
+    "strip": [
+        "true",
+        "false"
+    ],
+    "lto": [
+        "true",
+        "false"
+    ],
+    "opt-level": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "\"s\"",
+        "\"z\""
+    ],
+    "codegen-units": [
+        "1",
+        "16",
+        "256"
+    ]
+}

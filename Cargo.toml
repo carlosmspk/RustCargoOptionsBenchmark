@@ -3,9 +3,17 @@ name = "rust_cargo_options_benchmark"
 version = "0.1.0"
 edition = "2021"
 
-[profile.release]
-panic = "abort"
-strip = false
-lto = false
-opt-level = 0
-codegen-units = 256
+[features]
+default = [
+  "tokio/full",
+]
+
+[dependencies]
+static-rc = "0.6.0"
+anyhow = "1.0.65"
+serde = {version = "1.0.144", features = ["derive"]}
+serde_json = {version = "1.0.85", features = ["float_roundtrip", "preserve_order"]}
+lasso = "0.6.0"
+lazy_static = "1.4.0"
+md5 = "0.7.0"
+tokio = "1.20.0"
